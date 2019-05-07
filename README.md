@@ -1,2 +1,0 @@
-# thesis
-Self-Storage 
