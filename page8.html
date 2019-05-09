@@ -18,25 +18,23 @@
 
 
             <div class="verticalcenterwide">
-                <div class="two-column">
-                    <!--<svg width="80px" height="80px"> <img src="assets/storage_contents.svg"></svg>-->
-                    <!--<svg id="contents" width="200" height="200">-->
-                    <img src="assets/reasonsforstorage.svg">
+                <div class="two-column" style="width:54%;padding-top:6%">
 
-                    </svg>
+                    <img class="imgsvg" src="assets/reasonsforstorage_average.svg" id="svg-contents">
+
                 </div>
-                <div class="two-column">
+                <div class="two-column" style="width:34%;padding-top:6%;margin-top: 8%;">
                     <h3>
 
                         <p align="left">So why are we storing our stuff away?</p>
 
                     </h3>
-                    <h5 class="white">The range of reasons correlate to meaningful parts of everyone&rsquo;s life: family death to a growing family. Though the top reason being that people don&rsquo;t have enough space at home.
+                    <h5 class="white">The range of reasons correlate to meaningful parts of everyone&rsquo;s life: family death to a growing family. Though the top reason being that people don& rsquo;t have enough space at home.
                     </h5>
 
                     <p class="small">Click through for each generation.<br></p>
                     <p class="small">
-                        <button class="btn" id="btn-average">AVERAGE</button> Total average of all generations.</p>
+                        <button class="selectedwhite btn" id="btn-average">AVERAGE</button> Total average of all generations.</p>
                     <p class="small">
                         <button class="btn" id="btn-millennials"> MILLENNIALS </button> Born between 1980 and 2000.</p>
 
@@ -54,53 +52,103 @@
             </div>
 
             <div class=" bottomarrow ">
-                <a href="https://vfs.cloud9.us-east-1.amazonaws.com/vfs/92c7b0d5fe5749fe9e78913e0289f4b6/preview/swup/page7.html ">
+                <a href="https://vfs.cloud9.us-east-1.amazonaws.com/vfs/92c7b0d5fe5749fe9e78913e0289f4b6/preview/thesis/page7.html ">
                     <img src="assets/whiteprev.svg " class="prev "></a>
-                <a href="https://vfs.cloud9.us-east-1.amazonaws.com/vfs/92c7b0d5fe5749fe9e78913e0289f4b6/preview/swup/page9.html ">
+                <a href="https://vfs.cloud9.us-east-1.amazonaws.com/vfs/92c7b0d5fe5749fe9e78913e0289f4b6/preview/thesis/page9.html ">
                     <img src="assets/whitenext.svg " class="next "></a>
             </div>
+            <script src="https://code.jquery.com/jquery-3.4.1.js " integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin=" anonymous "></script>
+            <script type="text/javascript" src="scripts/swup.js "></script>
+            <script>
+                $(document).ready(function() {
 
-        </main>
-        <script src="https://code.jquery.com/jquery-3.4.1.js " integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin=" anonymous "></script>
-        <script type="text/javascript " src="scripts/swup.js "></script>
-        <script>
-            $(document).ready(function() {
-                defaultSvgDisplay(); //default show the average when loading thepage
-                click();
+                    click();
 
-                function defaultSvgDisplay() {
-                    $('#svg-average').show() // show the average as default 
-                    $('#svg-millennials').hide() //hide millennials 
-                    $('#svg-genx').hide() //hide genx 
-                    // AND DO WHAT?
+                });
+                //to make the buttons change color when clicked 
+                function selectAvgButton(event) {
+                    $('.btn').css("background-color", "black");
+                    $('.btn').css("color", "white");
+
+                    $('#' + event.target.id).css("background-color", "#FFFFFF");
+                    $('#' + event.target.id).css("color", "black");
                 }
+
+
+                function selectMillButton(event) {
+                    $('.btn').css("background-color", "black");
+                    $('.btn').css("color", "white");
+
+                    $('#' + event.target.id).css("background-color", "#ffd700");
+                    $('#' + event.target.id).css("color", "black");
+                }
+
+                function selectGenxButton(event) {
+                    $('.btn').css("background-color", "black");
+                    $('.btn').css("color", "white");
+
+                    $('#' + event.target.id).css("background-color", "#f98775");
+                    $('#' + event.target.id).css("color", "black");
+                }
+
+                function selectBooButton(event) {
+                    $('.btn').css("background-color", "black");
+                    $('.btn').css("color", "white");
+
+                    $('#' + event.target.id).css("background-color", "#00ffff");
+                    $('#' + event.target.id).css("color", "black");
+                }
+
+                function selectGreButton(event) {
+                    $('.btn').css("background-color", "black");
+                    $('.btn').css("color", "white");
+
+                    $('#' + event.target.id).css("background-color", "#0563ff");
+                    $('#' + event.target.id).css("color", "white");
+                }
+
+
 
                 function click() {
                     $('#btn-average').click(function() {
-                        // console.log("SHOW THE AVERAGE SVG AND HIDE THE REST")                        
-                        $('#svg-average').show() // NOW WHAT?
-                        $('#svg-millennials').hide() // AND DO WHAT?
-                        defaultSvgDisplay();
-                    });
 
-                    $('#btn-millennials').click(function() {
-                        $('#svg-average').hide()
-                        $('#svg-genx').hide() // NOW WHAT?
-                        $('#svg-millennials').fadeIn() // AND DO WHAT?
-
+                        $('#svg-contents').attr("src", "assets/reasonsforstorage_average.svg");
+                        selectAvgButton(event);
 
                     });
 
-                    $('#btn-genx').click(function() {
-                        $('#svg-average').hide()
-                        $('#svg-millennials').hide() // NOW WHAT?
-                        $('#svg-genx').fadeIn() // AND DO WHAT?
+                    $('#btn-millennials').click(function(event) {
+                        $('#svg-contents').attr("src", "assets/reasonsforstorage_millennial.svg");
 
+                        selectMillButton(event);
 
                     });
+
+                    $('#btn-genx').click(function(event) {
+
+                        $('#svg-contents').attr("src", "assets/reasonsforstorage_genx.svg");
+                        selectGenxButton(event);
+
+                    });
+
+                    $('#btn-boomers').click(function() {
+
+                        $('#svg-contents').attr("src", "assets/reasonsforstorage_boomers.svg");
+                        selectBooButton(event);
+
+                    });
+
+                    $('#btn-greatest').click(function() {
+
+                        $('#svg-contents').attr("src", "assets/reasonsforstorage_greatest.svg");
+                        selectGreButton(event);
+
+                    });
+
                 }
-            });
-        </script>
+            </script>
+        </main>
+
 
 
 

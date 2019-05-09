@@ -16,8 +16,8 @@
     /*display: flex;*/
     flex-direction: column;
     justify-content: center;
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 
@@ -65,7 +65,7 @@
 }
 
 .one-column {
-    padding-top: 30%;
+    padding-top: 25%;
     margin: 0 auto;
     text-align: center;
 }
@@ -79,7 +79,7 @@
 
 
 .two-column {
-    padding-top: 20%;
+    padding-top: 10%;
     width: 40%;
     /*display: inline;*/
     float: left;
@@ -114,7 +114,7 @@ main {
 }
 
 .page1 {
-    background-image: url('../assets/openingimage.jpg');
+    background-image: url('../assets/openingimagefinal.jpg');
     /*background-repeat: no-repeat;*/
     background-size: 100vw 100vh;
 }
@@ -151,10 +151,50 @@ main {
 }
 
 .barchart {
-    width: 70%;
+    width: 60%;
     padding: 35px 0 0px 0px;
     opacity: 0;
 
+}
+
+.graphpopup {
+    /*width: 70%;*/
+    /*padding: 35px 0 0px 0px;*/
+    opacity: 0;
+
+}
+
+.barchartshow {
+    width: 60%;
+    padding: 20px 0 0px 0px;
+    opacity: 1;
+}
+
+.imgsvg {
+    width: 696px;
+    height: 575px;
+}
+
+
+svg {
+    width: 950;
+    height: 400;
+}
+
+.sparklines {
+    width: 950px;
+    height: 250px;
+}
+
+.map {
+    width: 400px;
+    height: 600px;
+}
+
+.key {
+    width: 300px;
+    height: 200px;
+    align: left;
 }
 
 p {
@@ -197,9 +237,9 @@ h3 {
     font-style: normal;
     font-weight: 600;
     color: white;
-    font-size: 35px;
+    font-size: 32px;
+    line-height: 35px;
     letter-spacing: 0.02em;
-    line-height: 38px;
     text-align: center;
     margin: 0;
 }
@@ -224,8 +264,8 @@ h5 {
     font-weight: 700;
     letter-spacing: 0.03em;
     color: black;
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 17px;
+    line-height: 21.5px;
     text-align: left;
     margin-block-start: 0.6em;
 
@@ -282,91 +322,12 @@ h6 {
     color: black;
 }
 
-/*#btn-average {*/
+.btn.selectedwhite {
+    border-color: 2px black;
+    background: white;
+    color: black;
+}
 
-/*    border-color: 2px black;*/
-
-/*    background: #00FFFF;*/
-
-/*    color: black;*/
-
-/*}*/
-
-/*#btn-millenials {*/
-
-/*border-color: 2px black;*/
-
-/*background: #00FFFF;*/
-
-/*color: black;*/
-
-/*visibility: hidden;*/
-
-/*}*/
-
-/*#btn-genx {*/
-
-/*    border-color: 2px white;*/
-
-/*    background-color: black;*/
-
-/*    padding: 2px 5px;*/
-
-/*    font-size: 12px;*/
-
-/*    cursor: pointer;*/
-
-/*    text-align: left;*/
-
-/*    color: white;*/
-
-/*    font-family: acumin-pro, sans-serif;*/
-
-/*    font-style: normal;*/
-
-/*    font-weight: 700;*/
-
-/*    display: inline-block;*/
-
-/*    letter-spacing: 0.05em;*/
-
-/*}*/
-
-/*#btn-boomers {*/
-
-/*    border-color: 2px black;*/
-
-/*    background: #00FFFF;*/
-
-/*    color: black;*/
-
-/*}*/
-
-/*#btn-greatest {*/
-
-/*    border-color: 2px black;*/
-
-/*    background: #00FFFF;*/
-
-/*    color: black;*/
-
-/*}*/
-
-/*#svg-average {*/
-
-/*background-image: url('../assets/storage_contents.svg');*/
-
-/*}*/
-
-/*#svg-millenials {*/
-
-/*    background-image: url("../assets/storage_contents_millennials.svg");*/
-
-/*    display: none;*/
-
-/*}*/
-
-/* On mouse-over */
 
 .btn.hover {
     border-color: 2px black;
