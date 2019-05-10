@@ -191,13 +191,20 @@
       <script src="https://code.jquery.com/jquery-3.4.1.js " integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin=" anonymous "></script>
 
       <script>
+        document.addEventListener('swup:contentReplaced', function() {
+          $(document).ready(function() {
+            $('#usconsumption').delay(400).animate({ left: .5, opacity: "1" }, 1500);
+            $('#storagerevenue').delay(1700).animate({ left: .5, opacity: "1" }, 1500);
+          });
+        });
+
         $(document).ready(function() {
           $('#usconsumption').delay(400).animate({ left: .5, opacity: "1" }, 1500);
           $('#storagerevenue').delay(1700).animate({ left: .5, opacity: "1" }, 1500);
         });
+
         console.log("test");
       </script>
-
 
 
       <div class="bottomarrow">
