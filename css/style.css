@@ -89,6 +89,15 @@
     padding-right: 30px;
 }
 
+.two-column20 {
+    padding-top: 15%;
+    width: 40%;
+    /*display: inline;*/
+    float: left;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 @media only screen and (max-width: 400px) {
     .two-column {
         width: 100%;
@@ -161,7 +170,7 @@ main {
 
 .barchart {
     width: 60%;
-    padding: 35px 0 0px 0px;
+    padding: 40px 0 0px 0px;
     opacity: 0;
 
 }
