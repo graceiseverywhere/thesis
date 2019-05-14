@@ -5,9 +5,24 @@
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <link rel="stylesheet" href="css/transitions.css" type="text/css" />
 
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js " integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin=" anonymous "></script>
+
+    <script>
+      $(document).ready(function() {
+        $('#usconsumption').delay(400).animate({ left: .5, opacity: "1" }, 1500);
+        $('#storagerevenue').delay(1700).animate({ left: .5, opacity: "1" }, 1500);
+        // setTimeout(console.log("test"), 2000);
+
+        timeoutID = window.setTimeout(console.log("testingtime"), 2000, 'That was really slow!');
+
+      });
+
+      function start() { console.log("testingstart"); }
+    </script>
   </head>
 
-  <body>
+  <body onload="start();">
 
     <main id="swup" class="transition-fade page2">
       <!--where the cube menu lives-->
@@ -183,21 +198,7 @@
 
         </div>
       </div>
-      <script type="text/javascript" src="scripts/swup.js"></script>
-      <script type="text/javascript" src="scripts/script-index.js"></script>
 
-      <script src="https://code.jquery.com/jquery-3.4.1.js " integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin=" anonymous "></script>
-
-      <script>
-        $(document).ready(function() {
-          $('#usconsumption').delay(400).animate({ left: .5, opacity: "1" }, 1500);
-          $('#storagerevenue').delay(1700).animate({ left: .5, opacity: "1" }, 1500);
-          // setTimeout(console.log("test"), 2000);
-
-          timeoutID = window.setTimeout(console.log("testingtime"), 2000, 'That was really slow!');
-
-        });
-      </script>
       <div class="credit">source: IBIS world and data.worldbank.org</div>
 
 
@@ -208,7 +209,8 @@
                     <img src="assets/whitenext.svg" class="prev"></a>
 
 
-
+        <script type="text/javascript" src="scripts/swup.js"></script>
+        <script type="text/javascript" src="scripts/script-index.js"></script>
     </main>
   </body>
 
