@@ -183,7 +183,8 @@
 
         </div>
       </div>
-
+      <script type="text/javascript" src="scripts/swup.js"></script>
+      <script type="text/javascript" src="scripts/script-index.js"></script>
 
       <script src="https://code.jquery.com/jquery-3.4.1.js " integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin=" anonymous "></script>
 
@@ -191,8 +192,11 @@
         $(document).ready(function() {
           $('#usconsumption').delay(400).animate({ left: .5, opacity: "1" }, 1500);
           $('#storagerevenue').delay(1700).animate({ left: .5, opacity: "1" }, 1500);
+          // setTimeout(console.log("test"), 2000);
+
+          timeoutID = window.setTimeout(console.log("testingtime"), 2000, 'That was really slow!');
+
         });
-        console.log("test");
       </script>
       <div class="credit">source: IBIS world and data.worldbank.org</div>
 
@@ -203,8 +207,7 @@
         <a href="https://graceiseverywhere.github.io/thesis/page3.html">
                     <img src="assets/whitenext.svg" class="prev"></a>
 
-        <script type="text/javascript" src="scripts/swup.js"></script>
-        <script type="text/javascript" src="scripts/script-index.js"></script>
+
 
     </main>
   </body>
