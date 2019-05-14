@@ -10,15 +10,19 @@
 
     <script>
       $(document).ready(function() {
-        $('#usconsumption').delay(400).animate({ left: .5, opacity: "1" }, 1500);
-        $('#storagerevenue').delay(1700).animate({ left: .5, opacity: "1" }, 1500);
+        // $('#usconsumption').delay(400).animate({ left: .5, opacity: "1" }, 1500);
+        // $('#storagerevenue').delay(1700).animate({ left: .5, opacity: "1" }, 1500);
         // setTimeout(console.log("test"), 2000);
 
-        timeoutID = window.setTimeout(console.log("testingtime"), 2000, 'That was really slow!');
+        timeoutID = window.setTimeout(start, 1000, 'That was really slow!');
 
       });
 
-      function start() { console.log("testingstart"); }
+      function start() {
+        console.log("testingstart");
+        $('#usconsumption').delay(400).animate({ left: .5, opacity: "1" }, 1500);
+        $('#storagerevenue').delay(1700).animate({ left: .5, opacity: "1" }, 1500);
+      }
     </script>
   </head>
 
